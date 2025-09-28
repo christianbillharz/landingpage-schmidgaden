@@ -185,8 +185,8 @@ export default function Home() {
             <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
-                  src="https://wohnen-in-der-lohe.de/wp-content/uploads/2024/10/wohnen-in-der-lohe-balkone.webp"
-                  alt="Balkone und Terrassen"
+                  src="https://wohnen-in-der-lohe.de/wp-content/uploads/2024/10/P-0166_INT2_240918-enhanced-scaled.webp"
+                  alt="Visualisierung Schlafzimmer"
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, 33vw"
@@ -195,8 +195,8 @@ export default function Home() {
               </div>
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
-                  src="https://wohnen-in-der-lohe.de/wp-content/uploads/2024/10/wohnen-in-der-lohe-visualisierung.webp"
-                  alt="Außenvisualisierung"
+                  src="https://wohnen-in-der-lohe.de/wp-content/uploads/2024/10/P-0166_INT4_2401026-enhanced-neues-bad-scaled.webp"
+                  alt="Visualisierung Badezimmer"
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, 33vw"
@@ -205,8 +205,8 @@ export default function Home() {
               </div>
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
-                  src="https://wohnen-in-der-lohe.de/wp-content/uploads/2024/10/wohnen-in-der-lohe-lage.webp"
-                  alt="Lageplan"
+                  src="https://wohnen-in-der-lohe.de/wp-content/uploads/2024/10/P-0166_Ext1_240928-enhanced-scaled.webp"
+                  alt="Visualisierung Gebäuße & Parkplatz außen"
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, 33vw"
