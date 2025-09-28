@@ -1,9 +1,9 @@
-// Route handler: /api/lead
+// src/app/api/lead/route.ts
 // Proxies lead submissions to Google Apps Script to avoid browser CORS issues.
 
 export const runtime = "nodejs"; // ensure server runtime
 
-const GAS_URL = "https://script.google.com/macros/s/AKfycbygVcah5cSd18V2fjFL_8dyLdSa272zscKtGE-SOhEwVS_Cj-l8HBYZEu4pwX9J3sMb/exec";
+const GAS_URL = "https://script.google.com/macros/s/AKfycbwVaxbTGK5DicLaaCR26g2fWM9iNdNsicMA0Aa-X3LfPG0MkvaLOALsjlH-mcVc-LONnA/exec";
 
 export async function POST(request: Request) {
   try {
@@ -19,7 +19,7 @@ export async function POST(request: Request) {
       return Response.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    // Forward to Google Apps Script (server-side has no CORS restrictions)
+    // Forward to Google Apps Script
     const res = await fetch(GAS_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -29,16 +29,13 @@ export async function POST(request: Request) {
         email: data.email,
         telefon: data.telefon,
       }),
-      // server fetch follows redirects by default
     });
 
-    // Some GAS deployments return 200, others 302 -> 200 after redirect.
     if (!res.ok) {
       const text = await res.text().catch(() => "");
       return Response.json({ error: "Upstream error", details: text }, { status: 502 });
     }
 
-    // Try to pass-through minimal info
     return Response.json({ success: true });
   } catch (err) {
     return Response.json({ error: "Unexpected server error" }, { status: 500 });
