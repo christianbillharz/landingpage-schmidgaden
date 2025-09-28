@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import Image from "next/image";
-import { CheckCircle2, Home as HomeIcon, Ruler, Leaf, ShieldCheck, ThermometerSun, HousePlus } from "lucide-react";
+import { CircleCheck as CheckCircle2, Hop as HomeIcon, Ruler, Leaf, ShieldCheck, ThermometerSun, HousePlus } from "lucide-react";
 
 export default function Home() {
   // Scarcity: simple countdown to nächster Besichtigungsslot
